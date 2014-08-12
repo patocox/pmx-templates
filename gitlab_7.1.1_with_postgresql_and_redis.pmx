@@ -1,0 +1,49 @@
+---
+name: GitLab 7.1.1 with PostgreSQL and Redis
+description: ''
+keywords: ''
+type: Default
+documentation: ''
+images:
+- name: centurylink_gitlab_7.1.1
+  source: centurylink/gitlab:7.1.1
+  category: Web
+  type: Default
+  ports:
+  - host_port: '10080'
+    container_port: '80'
+    proto: TCP
+  - host_port: '10022'
+    container_port: '22'
+    proto: TCP
+  links:
+  - service: paintedfox_postgresql
+    alias: postgresql
+  - service: sameersbn_redis
+    alias: redisio
+  environment:
+  - variable: GITLAB_PORT
+    value: '10080'
+  - variable: GITLAB_SSH_PORT
+    value: '22'
+  - variable: DB_NAME
+    value: gitlab
+  - variable: DB_USER
+    value: gitlabuser
+  - variable: DB_PASS
+    value: password
+- name: paintedfox_postgresql
+  source: paintedfox/postgresql:latest
+  category: DB
+  type: Default
+  environment:
+  - variable: DB
+    value: gitlab
+  - variable: PASS
+    value: password
+  - variable: USER
+    value: gitlabuser
+- name: sameersbn_redis
+  source: sameersbn/redis:latest
+  category: DB
+  type: Default
