@@ -11,6 +11,11 @@ documentation: |
   ##System requirements
   Recommend 2GB of RAM for your Host and 2 Cores for best performance!
 
+  ##Setup
+  The values of environemental variables for both PostgreSQL and GitLab need to match. The Keys cannot change. Also, the aliases used in the links to Redis and Posatgres from GHitLab cannot change.
+  
+  If the GitLab service does not start up, try the **Rebuild App** function on the application details page to kick start it. Watch the journal for output.
+  
   ##Port Forwarding
   To view the GUI after launching the template, map your local host machine to port _10080_. If using Virtual Box, use the following command in your terminal to create the port forwarding rule:
 
