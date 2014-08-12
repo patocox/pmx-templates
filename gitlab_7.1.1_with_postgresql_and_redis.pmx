@@ -1,9 +1,35 @@
 ---
 name: GitLab 7.1.1 with PostgreSQL and Redis
-description: ''
-keywords: ''
+description: This template is Gitlab with separate containers for PostgreSQL and Redis.
+  This is based on an image from sameersbn / gitlab.
+keywords: gitlab, postgresql, redis, nginx, openssh, all
 type: Default
-documentation: ''
+documentation: |
+  GitLab with PostgrSQL + Redis
+  =======================
+  
+  ##System requirements
+  Recommend 2GB of RAM for your Host and 2 Cores for best performance!
+
+  ##Port Forwarding
+  To view the GUI after launching the template, map your local host machine to port _10080_. If using Virtual Box, use the following command in your terminal to create the port forwarding rule:
+
+  `VboxManage controlvm panamax-vm natpf1 gitlab,tcp,,8997,,10080`
+
+  Where, gitlab is the friendly name of the rule, tcp is the protocol. Replace port _8997_ with the local free port of your choice. 
+  
+  You can also use [these wiki instructions](https://github.com/CenturyLinkLabs/panamax-ui/wiki/How-To%3A-Port-Forwarding-on-VirtualBox) to setup port forwarding. 
+
+  After setup, browse to **http://localhost:8997** to see the GUI, as per the example.
+
+  ##Running
+  __NOTE__: Please allow a few minutes for the GitLab service to start. Watch the journal output for the  message that it is complete.
+
+  Login using the default username and password:
+
+  username: **root**
+
+  password: **5iveL!fe**
 images:
 - name: GitLab
   source: centurylink/gitlab:7.1.1
