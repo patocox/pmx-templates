@@ -28,7 +28,9 @@ documentation: |
   After setup, browse to **http://localhost:8997** to see the GUI, as per the example.
 
   ##Running
-  __NOTE__: Please allow a few minutes for the GitLab service to start. Watch the journal output for the  message that it is complete.
+  __NOTE__: Please allow a few minutes for the GitLab service to start. Watch the journal output for the message:
+  
+  `docker 127.0.0.1 - - [12/Aug/2014:07:28:59 +0000] "GET /api/v3/internal/check HTTP/1.1" 200 68 "-" "Ruby"`
 
   Login using the default username and password:
 
