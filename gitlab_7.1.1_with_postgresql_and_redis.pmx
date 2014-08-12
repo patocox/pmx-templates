@@ -5,7 +5,7 @@ keywords: ''
 type: Default
 documentation: ''
 images:
-- name: centurylink_gitlab_7.1.1
+- name: GitLab
   source: centurylink/gitlab:7.1.1
   category: Web
   type: Default
@@ -17,9 +17,9 @@ images:
     container_port: '22'
     proto: TCP
   links:
-  - service: paintedfox_postgresql
+  - service: PostgreSQL
     alias: postgresql
-  - service: sameersbn_redis
+  - service: Redis
     alias: redisio
   environment:
   - variable: GITLAB_PORT
@@ -32,7 +32,7 @@ images:
     value: gitlabuser
   - variable: DB_PASS
     value: password
-- name: paintedfox_postgresql
+- name: PostgreSQL
   source: paintedfox/postgresql:latest
   category: DB
   type: Default
@@ -43,7 +43,7 @@ images:
     value: password
   - variable: USER
     value: gitlabuser
-- name: sameersbn_redis
+- name: Redis
   source: sameersbn/redis:latest
   category: DB
   type: Default
