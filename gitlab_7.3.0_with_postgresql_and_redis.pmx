@@ -40,7 +40,7 @@ documentation: |
   password: **5iveL!fe**
 images:
 - name: GitLab
-  source: centurylink/gitlab:7.1.1
+  source: centurylink/gitlab:7.3.0
   category: Web
   type: Default
   ports:
