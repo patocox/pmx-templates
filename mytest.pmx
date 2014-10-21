@@ -1,0 +1,10 @@
+---
+name: mytest
+description: ''
+keywords: ''
+type: Default
+documentation: ''
+images:
+- name: library_mysql5_0.5
+  source: 109.107.36.152:5000/library/mysql5:0.5
+  type: Default
