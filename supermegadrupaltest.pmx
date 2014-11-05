@@ -14,7 +14,7 @@ documentation: |
 
   To view the GUI after launching the template, browse to http://panamax.local:8080.
 images:
-- name: PostgreSQL
+- name: PostgreSQL_cool
   source: centurylink/postgresql:9.3
   category: DB
   type: Default
