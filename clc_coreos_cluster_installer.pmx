@@ -18,6 +18,7 @@ documentation: |-
 images:
 - name: CLC_CoreOS_Cluster_Installer
   source: cakkineni/create-cluster:latest
+  category: Installer
   type: Default
   environment:
   - variable: CLUSTER_NAME
