@@ -1,0 +1,34 @@
+---
+name: CLC CoreOS Cluster Installer
+description: "**FOR TEST PURPOSES ONLY**"
+keywords: ''
+type: Default
+documentation: |-
+  #CLC CoreOS Cluster Installer
+
+  **FOR TEST PURPOSES ONLY**
+
+  You need to have an account setup with  API key and password and have created a network on CLC prior to running this template.
+
+  Fill in the environment variables for your CLC account and Save Changes. Template will run and output your creds for the cluster in the journal output.
+
+  Only run this once. Editing any other attributes of the templte will cause the template to run again and create an additional cluster.
+
+  The process takes about 20mins.
+images:
+- name: CLC_CoreOS_Cluster_Installer
+  source: cakkineni/create-cluster:latest
+  type: Default
+  environment:
+  - variable: CLUSTER_NAME
+    value: ''
+  - variable: NODE_COUNT
+    value: ''
+  - variable: API_KEY
+    value: ''
+  - variable: API_PASSWORD
+    value: ''
+  - variable: DATA_CENTER
+    value: ''
+  - variable: NETWORK_NAME
+    value: ''
