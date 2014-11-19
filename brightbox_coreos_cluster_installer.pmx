@@ -1,0 +1,19 @@
+---
+name: Brightbox CoreOS Cluster Installer
+description: ''
+keywords: ''
+type: Default
+documentation: "***Testing Purposes Only***"
+images:
+- name: Brightbox_CoreOS_Cluster
+  source: patocox/pmx-brightbox:latest
+  type: Default
+  environment:
+  - variable: APP_ID
+    value: ''
+  - variable: SECRET_ID
+    value: ''
+  - variable: NODE_COUNT
+    value: ''
+  - variable: TYPE
+    value: ''
