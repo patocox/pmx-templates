@@ -1,0 +1,26 @@
+name: DigitalOcean CoreOS + PMX Remote Agent
+description: ''
+keywords: ''
+type: Default
+documentation: "##Testing Purposes Only##"
+images:
+- name: DigitalOcean_CoreOS_Installer
+  source: patocox/pmx-digitalocean:lastest
+  type: Default
+  environment:
+  - variable: ACCESS_TOKEN
+    value: ''
+  - variable: SIZE
+    value: ''
+  - variable: DEPLOY_COUNT
+    value: ''
+  - variable: REGION
+    value: ''
+  - variable: ETCD_API
+    value: 172.17.42.1:4001
+- name: Remote_Agent_Setup
+  source: cakkineni/remote-agent-setup:latest
+  type: Default
+  environment:
+  - variable: ETCD_API
+    value: 172.17.42.1:4001
