@@ -5,7 +5,7 @@ type: Default
 documentation: "##Testing Purposes Only##"
 images:
 - name: DigitalOcean_CoreOS_Installer
-  source: patocox/pmx-digitalocean:lastest
+  source: patocox/pmx-digitalocean:latest
   type: Default
   environment:
   - variable: ACCESS_TOKEN
