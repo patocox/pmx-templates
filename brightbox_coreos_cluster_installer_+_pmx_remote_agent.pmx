@@ -1,0 +1,27 @@
+---
+name: Brightbox CoreOS Cluster Installer + PMX Remote Agent
+description: ''
+keywords: ''
+type: Default
+documentation: "##Testing Purposes Only##"
+images:
+- name: BrightBox_CoreOS_Installer
+  source: patocox/pmx-brightbox:agent-install
+  type: Default
+  environment:
+  - variable: APP_ID
+    value: ''
+  - variable: SECRET_ID
+    value: ''
+  - variable: NODE_COUNT
+    value: ''
+  - variable: TYPE
+    value: ''
+  - variable: ETCD_API
+    value: 172.17.4 2.1:4001
+- name: Remote_Agent_Setup
+  source: cakkineni/remote-agent-setup:latest
+  type: Default
+  environment:
+  - variable: ETCD_API
+    value: 172.17.4 2.1:4001
