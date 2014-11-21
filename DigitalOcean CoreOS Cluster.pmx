@@ -1,4 +1,4 @@
-name: DigitalOcean CoreOS + PMX Remote Agent
+name: DigitalOcean CoreOS Cluster
 description: ''
 keywords: ''
 type: Default
@@ -16,11 +16,5 @@ images:
     value: ''
   - variable: REGION
     value: ''
-  - variable: ETCD_API
-    value: 172.17.42.1:4001
-- name: Remote_Agent_Setup
-  source: cakkineni/remote-agent-setup:latest
-  type: Default
-  environment:
-  - variable: ETCD_API
-    value: 172.17.42.1:4001
+
+
