@@ -20,7 +20,7 @@ images:
   - variable: ETCD_API
     value: 172.17.42.1:4001
 - name: Remote_Agent_Setup
-  source: cakkineni/remote-agent-setup:latest
+  source: patocox/pmx-remote-agent-setup:latest
   type: Default
   environment:
   - variable: ETCD_API
