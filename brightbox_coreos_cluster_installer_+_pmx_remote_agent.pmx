@@ -6,7 +6,7 @@ type: Default
 documentation: "##Testing Purposes Only##"
 images:
 - name: BrightBox_CoreOS_Installer
-  source: patocox/pmx-brightbox:agent-install
+  source: patocox/pmx-brightbox:494.3.0
   type: Default
   environment:
   - variable: APP_ID
